@@ -44,12 +44,25 @@ class Paquet_de_cartes:
         """ Initialise l'attribut contenu avec une liste des 52
         objets Carte possibles rangés par valeurs croissantes en
         commençant par pique, puis cœur, carreau et trèfle. """
-        ...
-        ...
-        ...
-        ...
+        self.contenu = []
+        for i in range(1, 5):
+            for j in range(1, 14):
+                self.contenu.append(Carte(i, j))
+
     def recuperer_carte(self, pos):
         """ Renvoie la carte qui se trouve à la position pos
         (entier compris entre 0 et 51). """
-        ...
-        ...
+        assert 0 <= pos <= 51, "La position de la carte est incorrecte"
+        return self.contenu[pos]
+
+jeu = Paquet_de_cartes()
+carte1 = jeu.recuperer_carte(20)
+carte2 = jeu.recuperer_carte(0)
+assert carte1.recuperer_valeur() == "8", "Test 1 failed"
+assert carte1.recuperer_couleur() == "coeur", "Test 2 failed"
+assert carte2.recuperer_valeur() == "As", "Test 3 failed"
+assert carte2.recuperer_couleur() == "pique", "Test 4 failed"
+try:
+    carte3 = jeu.recuperer_carte(52)
+except:
+    print("Ex2 : Tests passed")
