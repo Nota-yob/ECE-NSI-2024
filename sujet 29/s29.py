@@ -32,3 +32,4 @@ def pascal(n):
 assert ligne_suivante([1, 3, 3, 1]) == [1, 4, 6, 4, 1], "Test 1 failed"
 assert pascal(2) == [[1], [1, 1], [1, 2, 1]], "Test 2 failed"
 assert pascal(3) == [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1]], "Test 3 failed"
+print("Ex 2 : Tests passed")

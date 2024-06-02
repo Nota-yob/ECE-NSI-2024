@@ -24,6 +24,7 @@ class Carre:
         '''Affiche un carré'''
         for i in range(self.ordre):
             print(self.tableau[i])
+            continue
 
     def somme_ligne(self, i):
         '''Calcule la somme des valeurs de la ligne i'''

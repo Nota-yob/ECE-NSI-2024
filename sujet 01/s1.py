@@ -10,9 +10,10 @@ def taille(arbre, sommet) :
         return 0
     return 1 + taille(arbre, arbre[sommet][0]) + taille(arbre, arbre[sommet][1])
 
-print(taille(a, 'F'))
-print(taille(a, 'B'))
-print(taille(a, 'I'))
+assert taille(a, 'F') == 9
+assert taille(a, 'B') == 5
+assert taille(a, 'I') == 2
+print("Ex 1 : Tests passed")
 
 # Exercice 2
 
@@ -35,4 +36,5 @@ def tri_selection(tab):
 
 tab = [41, 55, 21, 18, 12, 6, 25]
 tri_selection(tab)
-print(tab)
+assert tab == [6, 12, 18, 21, 25, 41, 55]
+print("Ex 2 : Tests passed")

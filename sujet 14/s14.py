@@ -65,4 +65,5 @@ assert carte2.recuperer_couleur() == "pique", "Test 4 failed"
 try:
     carte3 = jeu.recuperer_carte(52)
 except:
+    pass
     print("Ex2 : Tests passed")

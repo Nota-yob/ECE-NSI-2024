@@ -13,7 +13,7 @@ assert multiplication(3, 5) == 15, "Test 1 failed"
 assert multiplication(-4, -8) == 32, "Test 2 failed"
 assert multiplication(-2, 6) == -12, "Test 3 failed"
 assert multiplication(-2, 0) == 0, "Test 4 failed"
-print("Ex1 : Tests passed")
+print("Ex 1 : Tests passed")
 
 
 # Exercice 2 : dichotomie

@@ -31,7 +31,6 @@ def trouver_intrus(tab, g, d):
     else:
         nombre_de_triplets = (d - g) // 3
         indice = g + 3 * (nombre_de_triplets // 2)
-        print(indice)
         if tab[indice] != tab[indice+1]:
             return trouver_intrus(tab, g, indice)
         else:

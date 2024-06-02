@@ -33,4 +33,4 @@ def plus_ou_moins():
     else:
         print ("Perdu ! Le nombre était ", nb_mystere)
 
-plus_ou_moins()
+# plus_ou_moins()
