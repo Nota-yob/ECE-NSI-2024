@@ -1,12 +1,9 @@
 # Exercice 1 : Max liste
 
 def maximum_tableau(tab:list) -> list :
-    max = None
-    for val in tab :
-        if max is None :
-            max = val
-            continue
+    max = tab[0]
 
+    for val in tab :
         if val > max :
             max = val
     
@@ -14,7 +11,7 @@ def maximum_tableau(tab:list) -> list :
 
 assert maximum_tableau([98, 12, 104, 23, 131, 9]) == 131, "Test 1 failed"
 assert maximum_tableau([-27, 24, -3, 15]) == 24, "Test 2 failed"
-print("Ex1 : Tests passed")
+print("Ex 1 : Tests passed")
 
 
 # Exercice 2 : Parenthésage
