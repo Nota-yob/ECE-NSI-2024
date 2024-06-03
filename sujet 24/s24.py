@@ -1,21 +1,25 @@
 # Exercice 1 : parcours largeur
 
 def parcours_largeur(arbre:tuple) -> list :
+    if arbre is None :
+        return []
     parcours = []
     file = [arbre]
     while file :
         a = file.pop(0)
-        parcours.append(a[1])
-        if a[0] is not None :
-            file.append(a[0])
-        if a[2] is not None :
-            file.append(a[2])
+        gauche, racine, droite = a
+        parcours.append(racine)
+        if gauche is not None :
+            file.append(gauche)
+        if droite is not None :
+            file.append(droite)
     return parcours
 
 arbre = ( ( (None, 1, None), 2, (None, 3, None) ),
 4,
 ( (None, 5, None), 6, (None, 7, None) ) )
 assert parcours_largeur(arbre) == [4, 2, 6, 1, 3, 5, 7], "Test 1 failed"
+assert parcours_largeur(None) == [], "Test 2 failed"
 print("Ex1 : Tests passed")
 
 # Exercice 2 : plus grande somme consécutive
