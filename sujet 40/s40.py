@@ -34,7 +34,7 @@ def trouver_intrus(tab, g, d):
         if tab[indice] != tab[indice+1]:
             return trouver_intrus(tab, g, indice)
         else:
-            return trouver_intrus(tab, indice+3, d)
+            return trouver_intrus(tab, indice+3, d) # On ajoute 3 pour passer à l'autre triplet
 
 assert trouver_intrus([3, 3, 3, 9, 9, 9, 1, 1, 1, 7, 2, 2, 2, 4, 4, 4, 8, 8, 8], 0, 18) == 7
 assert trouver_intrus([8, 5, 5, 5, 9, 9, 9, 18, 18, 18, 3, 3, 3], 0, 12) == 8
